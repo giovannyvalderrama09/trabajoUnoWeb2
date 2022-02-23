@@ -1,7 +1,7 @@
 // Controlando etiquetas 
 
 //1. crear una variable para guardar una variable
-
+/*
 let etiquetaTitulo=document.getElementById("titulo")
 console.log(etiquetaTitulo)
 
@@ -18,4 +18,30 @@ etiquetaImagen.src="img/3.jpg"
 
 //Cambiar el estilo de la etiqueta  
 etiquetaTitulo.classList.add("text-center")
-etiquetaTitulo.classList.add("text-danger") 
+etiquetaTitulo.classList.add("text-danger")  */ 
+
+// Tienda 
+
+
+let productosNombre=["gorra red bull recing", "camiseta red bull recing"]
+let productosPrecio=[70000, 10000]
+letproductosPromocion=[true,false]
+
+
+console.log(productosNombre)
+console.log(productosNombre[1])
+
+//Creando objeto con JS
+
+let usuario= {
+ 
+    nombre: "Giovanny",
+    edad: 17,
+    amigos: ["omarion", "mr black"] 
+}
+console.log(usuario) 
+console.log(usuario.amigos[1])
+
+
+
+
