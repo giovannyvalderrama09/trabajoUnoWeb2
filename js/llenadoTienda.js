@@ -28,10 +28,10 @@ let productos=[
  let fila=document.getElementById("fila")
 
  productos.forEach(function (ejemplo) {
-  console.log(ejemplo.nombre)
+ /* console.log(ejemplo.nombre)
   console.log(ejemplo.precio)
   console.log(ejemplo.descripcion)   
-
+*/
 
   let columna=document.createElement("div")
   columna.classList.add("col")
@@ -53,15 +53,15 @@ let productos=[
   dinero.classList.add("text-center")
   dinero.textContent= "$" + ejemplo.precio
   
-  let descripcionP=document.createElement("h6")
+  let descripcionP=document.createElement("p")
   descripcionP.classList.add("text-center")
   descripcionP.textContent= ejemplo.descripcion
 
 let boton=document.createElement("button")
 boton.classList.add("btn")
-boton.classList.add("btn-outline-danger")
+boton.classList.add("btn-outline-dark")
 boton.classList.add("m-3")
-boton.textContent = "Comprar productos"
+boton.textContent = "Ver productos"
 
   
 targeta.appendChild(imagen)
@@ -74,6 +74,36 @@ columna.appendChild(targeta)
 fila.appendChild(columna)
 
  })
+
+
+
+ //Rutina para ampliar informacion del producto 
+
+let filContenedora=document.getElementById("fila")
+filContenedora.addEventListener("click",function(evento) {
+  
+if(evento.target.classList.contains("btn")) {
+
+
+console.log(evento.target.parentElement.querySelector("h4").textContent)
+console.log(evento.target.parentElement.querySelector("img").src)
+
+
+    let fotoinfo=document.getElementById("fotoinfo")
+
+
+  let modalinfo = new bootstrap.Modal(document.getElementById("modalinfo"))
+
+ 
+  
+
+  modalinfo.show()
+
+}
+
+})
+
+
 
 
 
