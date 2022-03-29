@@ -45,15 +45,15 @@ let productos=[
   imagen.src=ejemplo.foto
 
 
-  let titulo=document.createElement("h4")
+  let titulo=document.createElement("h3")
   titulo.classList.add("text-center")
   titulo.textContent= ejemplo.nombre
 
-  let dinero=document.createElement("h5")
+  let dinero=document.createElement("h4")
   dinero.classList.add("text-center")
   dinero.textContent= "$" + ejemplo.precio
   
-  let descripcionP=document.createElement("p")
+  let descripcionP=document.createElement("h5")
   descripcionP.classList.add("text-center")
   descripcionP.textContent= ejemplo.descripcion
 
@@ -77,27 +77,29 @@ fila.appendChild(columna)
 
 
 
- //Rutina para ampliar informacion del producto 
+ //Lanzando el modal
+ let contenedorTienda=document.getElementById("fila")
 
-let filContenedora=document.getElementById("fila")
-filContenedora.addEventListener("click",function(evento) {
-  
-if(evento.target.classList.contains("btn")) {
+ contenedorTienda.addEventListener("click",function(evento){
 
+ if(evento.target.classList.contains("btn")){
+    
+     let modalinfo = new bootstrap.Modal(document.getElementById('modalinformacion'))
+     
+     let fotoInfo=document.getElementById("fotoInfo")
+     fotoInfo.src=evento.target.parentElement.querySelector("img").src
 
-console.log(evento.target.parentElement.querySelector("h4").textContent)
-console.log(evento.target.parentElement.querySelector("img").src)
+     let nombreInfo=document.getElementById("nombreInfo")
+     nombreInfo.textContent=evento.target.parentElement.querySelector("h3").textContent
 
+     let precioInfo=document.getElementById("precioInfo")
+     precioInfo.textContent=evento.target.parentElement.querySelector("h4").textContent
 
-    let fotoinfo=document.getElementById("fotoinfo")
+     let descripcionInfo=document.getElementById("descripcionInfo")
+     descripcionInfo.textContent=evento.target.parentElement.querySelector("h5").textContent
 
-
-  let modalinfo = new bootstrap.Modal(document.getElementById("modalinfo"))
-
- 
-  
-
-  modalinfo.show()
+     
+     modalinfo.show()
 
 }
 
