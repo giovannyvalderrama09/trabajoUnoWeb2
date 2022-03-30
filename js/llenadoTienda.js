@@ -1,27 +1,31 @@
 
+
+ export function llenarTienda() {
+
 //Creando un arreglo de objetos 
 
-let productos=[
+  let productos=[
 
     { foto: "img/imagen1.jpg",  nombre:"camiseta", precio:"150000",descripcion:"camiseta original red bull racing"}, 
 
-     { foto: "img/imagen2.jpg",  nombre:"gorra",precio:"125000",descripcion:"gorra original red bull racing"},
+    { foto: "img/imagen2.jpg",  nombre:"gorra",precio:"125000",descripcion:"gorra original red bull racing"},
      
-     { foto: "img/imagen3.jpg",  nombre:"chanclas",precio:"120000",descripcion:"chanclas original red bull racing"},
+    { foto: "img/imagen3.jpg",  nombre:"chanclas",precio:"120000",descripcion:"chanclas original red bull racing"},
 
-     { foto: "img/imagen4.jpg",  nombre:"sudadera",precio:"150000",descripcion:"sudadera original red bull racing"},
+    { foto: "img/imagen4.jpg",  nombre:"sudadera",precio:"150000",descripcion:"sudadera original red bull racing"},
 
-     { foto: "img/imagen5.jpg",  nombre:"pocillo",precio:"150000",descripcion:"pocillo original red bull racing"},
+    { foto: "img/imagen5.jpg",  nombre:"pocillo",precio:"150000",descripcion:"pocillo original red bull racing"},
+ 
+    { foto: "img/imagen6.jpg",  nombre:"buso",precio:"170000",descripcion:"buso original red bull racing"},
+ 
+    { foto: "img/imagen7.jpg",  nombre:"carro a escala",precio:"300000",descripcion:"carro a escala original red bull racing"},
+ 
+    { foto: "img/imagen8.jpg",  nombre:"Tenis",precio:"200000",descripcion:"Tenis original red bull racing"}, 
 
-     { foto: "img/imagen6.jpg",  nombre:"buso",precio:"170000",descripcion:"buso original red bull racing"},
+    { foto: "img/imagen9.jpg",  nombre:"manos libres",precio:"125000",descripcion:"manos libres original red bull racing"}, 
 
-     { foto: "img/imagen7.jpg",  nombre:"carro a escala",precio:"300000",descripcion:"carro a escala original red bull racing"},
+    { foto: "img/imagen10.jpg",  nombre:"termo",precio:"130000",descripcion:"termo original red bull racing"},   
 
-     { foto: "img/imagen8.jpg",  nombre:"Tenis",precio:"200000",descripcion:"Tenis original red bull racing"}, 
-
-     { foto: "img/imagen9.jpg",  nombre:"manos libres",precio:"125000",descripcion:"manos libres original red bull racing"}, 
-
-     { foto: "img/imagen10.jpg",  nombre:"termo",precio:"130000",descripcion:"termo original red bull racing"},    
 ]
 
 
@@ -74,36 +78,16 @@ columna.appendChild(targeta)
 fila.appendChild(columna)
 
  })
-
-
-
- //Lanzando el modal
- let contenedorTienda=document.getElementById("fila")
-
- contenedorTienda.addEventListener("click",function(evento){
-
- if(evento.target.classList.contains("btn")){
-    
-     let modalinfo = new bootstrap.Modal(document.getElementById('modalinformacion'))
-     
-     let fotoInfo=document.getElementById("fotoInfo")
-     fotoInfo.src=evento.target.parentElement.querySelector("img").src
-
-     let nombreInfo=document.getElementById("nombreInfo")
-     nombreInfo.textContent=evento.target.parentElement.querySelector("h3").textContent
-
-     let precioInfo=document.getElementById("precioInfo")
-     precioInfo.textContent=evento.target.parentElement.querySelector("h4").textContent
-
-     let descripcionInfo=document.getElementById("descripcionInfo")
-     descripcionInfo.textContent=evento.target.parentElement.querySelector("h5").textContent
-
-     
-     modalinfo.show()
-
+  
 }
 
-})
+
+
+
+
+
+
+ 
 
 
 
