@@ -49,9 +49,11 @@ botonAgregarCarrito.addEventListener("click",function() {
      //pintar la capsula del carrito
      let suma=0
      carrito.forEach(function(producto) {
-     suma=suma+Number(producto.cantidad)        
+     suma=suma+Number(producto.cantidad) 
+
      })
 
+    
 
      console.log(suma)
   let capsula=document.getElementById("capsula")
@@ -65,7 +67,7 @@ limpiarCarrito.addEventListener("click",function(limpiar) {
     carrito=[]
     let capsula=document.getElementById("capsula")
     capsula.textContent = 0
-    capsula.classList("invisible")
+    capsula.classList.add("invisible")
 })
 
 //rutina para el carrito 
@@ -95,10 +97,39 @@ botonVercarrito.addEventListener("click",function() {
         foto.classList.add("w-100","img-fluid")
         foto.src=producto.foto
 
+        let nombrePro=document.createElement("h3")
+        nombrePro.classList.add("text-center")
+        nombrePro.textContent=producto.nombre
 
+        let precioPro=document.createElement("h4")
+        precioPro.classList.add("text-center")
+        precioPro.textContent=producto.precio
+
+       let cantidadPro=document.createElement("h5")
+       cantidadPro.classList.add("text-center")
+       cantidadPro.textContent=  "Cantidad: " + producto.cantidad
+
+
+     // intento de la suma del subtotal
+       let sumaCan=[]
+
+       sumaCan.push(cantidad)
+
+        let suma=0
+        sumaCan.forEach(function(cantidad) {
+        suma=suma+Number(cantidad.precio) 
+       })
+
+        let sumaCant=document.createElement("h6")
+        sumaCant.classList.add("text-center")
+        sumaCant.textContent = "Subtotal: " + producto.cantidad
 
     //PADRES E HIJOS
     columna1.appendChild(foto)
+    columna2.appendChild(nombrePro)
+    columna2.appendChild(precioPro)
+    columna2.appendChild(cantidadPro)
+    columna2.appendChild(sumaCant) 
     fila.appendChild(columna1)
     fila.appendChild(columna2)
     basecarrito.appendChild(fila)
