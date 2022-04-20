@@ -110,26 +110,13 @@ botonVercarrito.addEventListener("click",function() {
        cantidadPro.textContent=  "Cantidad: " + producto.cantidad
 
 
-     // intento de la suma del subtotal
-       let sumaCan=[]
-
-       sumaCan.push(cantidad)
-
-        let suma=0
-        sumaCan.forEach(function(cantidad) {
-        suma=suma+Number(cantidad.precio) 
-       })
-
-        let sumaCant=document.createElement("h6")
-        sumaCant.classList.add("text-center")
-        sumaCant.textContent = "Subtotal: " + producto.cantidad
+    
 
     //PADRES E HIJOS
     columna1.appendChild(foto)
     columna2.appendChild(nombrePro)
     columna2.appendChild(precioPro)
     columna2.appendChild(cantidadPro)
-    columna2.appendChild(sumaCant) 
     fila.appendChild(columna1)
     fila.appendChild(columna2)
     basecarrito.appendChild(fila)
