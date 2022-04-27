@@ -1,0 +1,14 @@
+body{
+  background-image: url(../img/imagen\ 123.png);
+}
+
+.menu-tienda{
+   background: linear-gradient(100deg, #000, #ed7272);
+}
+.menu-tienda a{
+  color: #fff;
+}
+.menu-tienda a:hover{
+  color: #f00;
+  text-decoration: underline;
+}
