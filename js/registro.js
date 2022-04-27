@@ -2,6 +2,10 @@ import {getAuth, createUserWithEmailAndPassword  } from "https://www.gstatic.com
 
 let boton=document.getElementById("boton-registro")
 
+let modalRegistro= new bootstrap.Modal(document.getElementById('mensaje-form'))
+
+let textoModal=document.getElementById("mensaje")
+
 boton.addEventListener("click",function(evento) {
     evento.preventDefault()
     let email=document.getElementById("email").value 
@@ -13,16 +17,31 @@ boton.addEventListener("click",function(evento) {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log("exito en el registro")
+        console.log("Exito en el registro")
+        textoModal.textContent= "exito en el registro"
+        modalRegistro.show()
+        let formulario=document.getElementById("formulario-registro")
+        formulario.reset()
+        setTimeout(function(){
+          modalRegistro.hide()
+
+        },2000)
+        
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-       console.log("fallo "+errorMessage)
+       console.log("fallo " +errorMessage)
+       textoModal.textContent= "Fallo en el registro "+errorMessage
+       modalRegistro.show()
+
+       setTimeout(function() {
+         modalRegistro.hide()
+       },2000)
 
       });
-
-    
 })
+
+

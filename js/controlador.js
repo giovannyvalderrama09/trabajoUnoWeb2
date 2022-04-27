@@ -39,6 +39,8 @@ botonAgregarCarrito.addEventListener("click",function() {
     let cantidad=document.getElementById("cantidadProducto").value
     producto.cantidad=cantidad
 
+    producto.subtotalPro=cantidad*(Number(producto.precio.split("$")[1]))
+
  
  
      //Agrego el producto al carrito
@@ -52,6 +54,8 @@ botonAgregarCarrito.addEventListener("click",function() {
      suma=suma+Number(producto.cantidad) 
 
      })
+
+     
 
     
 
@@ -107,7 +111,13 @@ botonVercarrito.addEventListener("click",function() {
 
        let cantidadPro=document.createElement("h5")
        cantidadPro.classList.add("text-center")
-       cantidadPro.textContent=  "Cantidad: " + producto.cantidad
+       cantidadPro.textContent=  "Cantidad: " + producto.cantidad    
+
+       let subtotal=document.createElement("h5")
+       subtotal.classList.add("text-center")
+       subtotal.textContent= "Subtotal: " + producto.subtotalPro
+
+      
 
 
     
@@ -117,6 +127,7 @@ botonVercarrito.addEventListener("click",function() {
     columna2.appendChild(nombrePro)
     columna2.appendChild(precioPro)
     columna2.appendChild(cantidadPro)
+    columna2.appendChild(subtotal)
     fila.appendChild(columna1)
     fila.appendChild(columna2)
     basecarrito.appendChild(fila)
