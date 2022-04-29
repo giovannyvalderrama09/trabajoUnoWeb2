@@ -23,7 +23,7 @@ h5{
     color: #fff;
 }
 .menu2{
-    background: linear-gradient(100deg, #000, #ed7272);
+    background: linear-gradient(100deg, #001E6C, #ed7272);
     transition: 2s;
 }
 
@@ -31,10 +31,18 @@ h5{
     text-decoration: none;
     color: #fff;
 }
+#boton-check{
+    background-color: #001E6C ;
+}
+
 .menu a:hover{
     text-decoration: underline;
+    color: #f00;
 }
 .menu2 a:hover{
     text-decoration: underline;
+    color: #f00;
+    
 }
+
 

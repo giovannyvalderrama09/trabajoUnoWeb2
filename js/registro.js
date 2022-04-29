@@ -18,7 +18,7 @@ boton.addEventListener("click",function(evento) {
         // Signed in
         const user = userCredential.user;
         console.log("Exito en el registro")
-        textoModal.textContent= "exito en el registro"
+        textoModal.textContent= "Exito en el registro"
         modalRegistro.show()
         let formulario=document.getElementById("formulario-registro")
         formulario.reset()
@@ -34,7 +34,7 @@ boton.addEventListener("click",function(evento) {
         const errorMessage = error.message;
         // ..
        console.log("fallo " +errorMessage)
-       textoModal.textContent= "Fallo en el registro "+errorMessage
+       textoModal.textContent= "Fallo en el registro " 
        modalRegistro.show()
 
        setTimeout(function() {
