@@ -37,11 +37,11 @@ h5{
 
 .menu a:hover{
     text-decoration: underline;
-    color: #f00;
+    text-decoration-color:#f00;
 }
 .menu2 a:hover{
     text-decoration: underline;
-    color: #f00;
+    text-decoration-color: #f00;
     
 }
 

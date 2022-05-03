@@ -39,9 +39,9 @@ botonAgregarCarrito.addEventListener("click",function() {
     let cantidad=document.getElementById("cantidadProducto").value
     producto.cantidad=cantidad
 
+    //Subtotal
     producto.subtotalPro=cantidad*(Number(producto.precio.split("$")[1]))
 
- 
  
      //Agrego el producto al carrito
     carrito.push(producto)
@@ -73,6 +73,9 @@ limpiarCarrito.addEventListener("click",function(limpiar) {
     capsula.textContent = 0
     capsula.classList.add("invisible")
 })
+
+  
+
 
 //rutina para el carrito 
 let botonVercarrito=document.getElementById("vercarrito")
@@ -115,7 +118,8 @@ botonVercarrito.addEventListener("click",function() {
 
        let subtotal=document.createElement("h5")
        subtotal.classList.add("text-center")
-       subtotal.textContent= "Subtotal: " + producto.subtotalPro
+       subtotal.textContent= "Subtotal: $" + producto.subtotalPro
+
 
       
 
