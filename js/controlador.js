@@ -42,6 +42,8 @@ botonAgregarCarrito.addEventListener("click",function() {
     //Subtotal
     producto.subtotalPro=cantidad*(Number(producto.precio.split("$")[1]))
 
+  
+
  
      //Agrego el producto al carrito
     carrito.push(producto)
@@ -52,6 +54,11 @@ botonAgregarCarrito.addEventListener("click",function() {
      let suma=0
      carrito.forEach(function(producto) {
      suma=suma+Number(producto.cantidad) 
+
+     let sumatotal=0
+     carrito.forEach(function () {
+         
+     })
 
      })
 
@@ -100,9 +107,9 @@ botonVercarrito.addEventListener("click",function() {
         columna2.classList.add("col-8")
 
 
-        let foto=document.createElement("img")
-        foto.classList.add("w-100","img-fluid")
-        foto.src=producto.foto
+        let imagen=document.createElement("img")
+        imagen.classList.add("w-100","img-fluid")
+        imagen.src=producto.foto
 
         let nombrePro=document.createElement("h3")
         nombrePro.classList.add("text-center")
@@ -120,18 +127,25 @@ botonVercarrito.addEventListener("click",function() {
        subtotal.classList.add("text-center")
        subtotal.textContent= "Subtotal: $" + producto.subtotalPro
 
+       let total=document.createElement("h6")
+       total.classList.add("text-center")
+       total.textContent= "Total compra: $" +producto.totalPro
+      
+    
 
+   
       
 
 
     
 
     //PADRES E HIJOS
-    columna1.appendChild(foto)
+    columna1.appendChild(imagen)
     columna2.appendChild(nombrePro)
     columna2.appendChild(precioPro)
     columna2.appendChild(cantidadPro)
     columna2.appendChild(subtotal)
+    columna2-appendChild(total)
     fila.appendChild(columna1)
     fila.appendChild(columna2)
     basecarrito.appendChild(fila)
